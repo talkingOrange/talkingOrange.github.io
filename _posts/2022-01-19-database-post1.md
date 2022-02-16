@@ -6,7 +6,7 @@ categories: database
 ---
 
 # Chapter 1 데이터베이스의 기본 개념
----
+
 - 데이터베이스의 필요성
 
 	* 데이터 vs 정보
