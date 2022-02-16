@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[데이터베이스] 데이터베이스개론 Ch3 "
+title:  "[데이터베이스] 데이터베이스개론 CH3 "
 date:   2022-01-21
 categories: database
 ---
