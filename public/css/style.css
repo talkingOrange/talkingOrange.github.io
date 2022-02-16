@@ -161,6 +161,10 @@ a.nav-item:hover { color: #777; }
 	color: #333;
 }
 
+
+/*add font-size*/
+.post-content {font-size: 12px;}
+
 #contact-list li .fa,
 article .share .btn {
 	-o-transition:color .2s ease-out, background 1s ease-in;
