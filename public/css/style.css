@@ -163,7 +163,7 @@ a.nav-item:hover { color: #777; }
 
 
 /*add font-size*/
-.post-content {font-size: 12px;}
+#post-content {font-size: 12px;}
 
 #contact-list li .fa,
 article .share .btn {
