@@ -132,7 +132,7 @@ code {
 }
 
 .nav-title {
-	font-size: 100%;
+	font-size: 95%;
 	font-family: "Noto Sans";
 	text-transform: uppercase;
 	border-bottom: 1px solid gray;
@@ -140,7 +140,7 @@ code {
 }
 
 a.nav-item {
-	font-size: 120%;
+	font-size: 110%;
 	font-family: "Noto Sans";
 	text-transform: capitalize;
 	color: #aaa;
@@ -148,7 +148,7 @@ a.nav-item {
 
 a.nav-item:hover { color: #777; }
 
-.badge { font-size: 70%; }
+.badge { font-size: 60%; }
 .badge::before { content: "("; }
 .badge::after { content: ")"; }
 
@@ -209,7 +209,7 @@ article .share .gplus:hover {
 
 article {
 	padding: 0 5% 0;
-	font-size: 17px;
+	font-size: 14px;
 	margin-bottom: 100px;
 	line-height: 1.9;
 }
