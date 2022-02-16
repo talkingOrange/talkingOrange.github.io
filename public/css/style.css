@@ -140,7 +140,7 @@ code {
 }
 
 a.nav-item {
-	font-size: 110%;
+	font-size: 85%;
 	font-family: "Noto Sans";
 	text-transform: capitalize;
 	color: #aaa;
@@ -162,8 +162,6 @@ a.nav-item:hover { color: #777; }
 }
 
 
-/*add font-size*/
-#post-content {font-size: 12px;}
 
 #contact-list li .fa,
 article .share .btn {
@@ -214,7 +212,7 @@ article {
 	line-height: 1.9;
 }
 
-article.home div a, article.home pre a { color: #2c3e50; }
+article.home div a, article.home pre a { color: #2c3e50;  font-weight: bold;}
 article.home div a:hover, article.home pre a:hover { color: #2c3e50; text-decoration: none; }
 article img { max-width: 100%; }
 
