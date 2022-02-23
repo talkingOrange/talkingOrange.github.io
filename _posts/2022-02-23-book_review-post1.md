@@ -8,7 +8,7 @@ categories: Book_review
 # 『무던한 개발자를 위한 모던한 자바스크립트』리뷰
 
 ---
- ###  > 책 소개
+###  > 책 소개
 
 ![alt text](/public/img/bookphoto.jpg)
 
@@ -65,7 +65,7 @@ categories: Book_review
          
 ---
 
-### 공부를 끝낸 뒤
+###  > 공부를 끝낸 뒤
 
 웹 프로젝트를 진행할 때, JSON을 이용하면 쉽게 풀릴 것 같은 문제인데 개념을 알질 못해서 밤새 찾다가 포기했던 적이 있다.
 
