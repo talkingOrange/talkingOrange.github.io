@@ -8,7 +8,7 @@ categories: Book_review
 # 『무던한 개발자를 위한 모던한 자바스크립트』리뷰
 
 ---
-### 책 소개
+ ###  > 책 소개
 
 ![alt text](/public/img/bookphoto.jpg)
 
