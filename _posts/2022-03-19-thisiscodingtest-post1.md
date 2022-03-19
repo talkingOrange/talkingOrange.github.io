@@ -12,6 +12,7 @@ categories: studyAlgorithm
 대외 동아리에 가입하면서 동아리 내의 스터디그룹에도 가입하게 되었다. 
 막무가내식 코딩을 많이 하고 있기도 하고 이번 학기에 알고리즘 수업을 듣기 때문에 스터디를 가입하면 더 열심히 공부할 수 있지 않을까하는 생각으로 시작했다.
 이번 주에는 내가 발표를 맡아, 발표를 준비하는 겸 블로그에 정리글을 올려보고자 한다.
+
 +) [이코테 교재 깃허브](https://github.com/ndb796/python-for-coding-test)
 
 ---
@@ -63,7 +64,7 @@ int main(void) {
 </div>
 </details>
 
-C++에서 stack 헤더파일을 이용하면 되고, push와 pop이 기본적으로 삽입과 삭제를 의미하는 함수다. 
+- C++에서 stack 헤더파일을 이용하면 되고, push와 pop이 기본적으로 삽입과 삭제를 의미하는 함수다. 
 
 ---
 
@@ -107,7 +108,7 @@ int main(void) {
 </details>
 
 
-C++에서 queue 헤더파일을 이용하면 된다.
+- C++에서 queue 헤더파일을 이용하면 된다.
 
 
 ---
@@ -116,8 +117,9 @@ C++에서 queue 헤더파일을 이용하면 된다.
 - 자기 자신을 다시 호출하는 함수
 - cf) Fractal 구조
 - <span style="color:red">재귀함수는 종료조건을 꼭 명시해야한다. </span>
+    + 재귀함수는 내부적으로 **스택 자료구조와 동일**하다. 
 
--queue 예제
+-재귀함수 예제, factoria(팩토리얼) 수학문제
 ```c++
 #include <iostream>
 #include <queue>
