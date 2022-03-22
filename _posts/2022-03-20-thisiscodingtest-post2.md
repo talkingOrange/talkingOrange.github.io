@@ -58,8 +58,6 @@ int main(void) {
 #### 인접 리스트 방식
 - 연결 리스트에 각 노드가 연결된 형태를 기록하는 방식
 - C++과 자바는 별도의 연결 리스트 기능의 표준 라이브러리를 제공한다. (+파이썬은 append()와 메소드 제공)
-- 연결되어 있지 않은 노드끼리는 무한의 비용으로 선언한다. 
-  + 코드에서 999999999 등의 값으로 넣는데, 그 이유는 논리적으로 정답이 될 수 없는 큰 값이기 때문이다. 
 - ![인접 리스트 이미지](/public/img/studyAlgorithm/Adjacency_Matrix.png)
 
 ```c++
@@ -136,6 +134,8 @@ int main(void) {
 
 
 - 코드로 구현할 , 스택을 재귀 함수로 이용.
+
+
 ```c++
 #include <iostream>
 #include <vector>
@@ -155,7 +155,6 @@ void dfs(int x) {
         if (!visited[y]) dfs(y);
     }
 }
-
 int main(void) {
     // 노드 1에 연결된 노드 정보 저장 
     graph[1].push_back(2);
