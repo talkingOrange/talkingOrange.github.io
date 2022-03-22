@@ -14,7 +14,8 @@ categories: studyAlgorithm
  ![음료수 얼려 먹기 문제 이미지](/public/img/studyAlgorithm/DFS_Q1(2).png)
 
 - DFS로 해결하는 문제
-- 
+- 방문처리가 이루어 지는 것의 개수만 세면 됨.(0인 노드 중)
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -73,6 +74,7 @@ int main(void){
 
 ```
 
+- scanf("%1d"...) 를 통해 *공백 없이* , *한 문자씩* 2차원 배열에 담는다.
 
 ---
 
@@ -80,6 +82,8 @@ int main(void){
  ![미로탈출 문제 이미지](/public/img/studyAlgorithm/BFS_Q2.png)
 
 - BFS로 해결하는 문제
+- 괴물이 있는 0을 피해서 최하단으로 이동하는 최소 거리를 구하기
+- 인접노드가 값이 1일 때, 인접노드로 이동하고 그 값은 +1해준다.
 
 ```c++
 #include<iostream>
@@ -136,3 +140,4 @@ int main(void) {
 
 ```
 
+- pair<> 객체를 이용해서 데이터의 쌍을 클래스를 따로 만들지 않아도 표현할 수 있다.
