@@ -5,7 +5,7 @@ date:   2022-03-22
 categories: studyAlgorithm
 ---
 
-# CH5-3. 탐색 알고리즘, DFS/BFS의 예제
+# CH5-3. 탐색 알고리즘, DFS/BFS의 예제1/2
 
 ---
 
