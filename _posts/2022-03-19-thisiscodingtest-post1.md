@@ -27,7 +27,7 @@ categories: studyAlgorithm
 ### 스택
 - 후입선출 구조(=선입후출 구조)
 - 박스 쌓기와 치우기
-- ![선입후출 구조 이미지](/public/img/studyAlgorithm/stack.jpg)
+- ![선입후출 구조 이미지](/public/img/studyAlgorithm/stack.png)
 
 -stack 예제
 ```c++
@@ -71,7 +71,7 @@ int main(void) {
 ### 큐
 - 선입선출 구조
 - 줄 서기
-- ![선입선출 구조 이미지](/public/img/studyAlgorithm/queue.jpg)
+- ![선입선출 구조 이미지](/public/img/studyAlgorithm/queue.png)
 
 -queue 예제
 ```c++
@@ -164,5 +164,11 @@ int main(void) {
 
 
 
+
+
+
+
+
+> 이미지출처:https://velog.io/@dumok_/DFSBFS-%EA%B0%9C%EB%85%90
 
 
