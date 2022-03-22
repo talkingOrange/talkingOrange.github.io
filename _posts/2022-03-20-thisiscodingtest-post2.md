@@ -20,7 +20,7 @@ categories: studyAlgorithm
 - 2차원 배열에 각 노드가 연결된 형태를 기록하는 방식
 - 연결되어 있지 않은 노드끼리는 무한의 비용으로 선언한다. 
   + 코드에서 999999999 등의 값으로 넣는데, 그 이유는 논리적으로 정답이 될 수 없는 큰 값이기 때문이다. 
-- ![인접 행렬 이미지](/public/img/studyAlgorithm/Adjacency_List.jpg)
+- ![인접 행렬 이미지](/public/img/studyAlgorithm/Adjacency_List.png)
 
 ```c++
 #include <iostream>
@@ -60,7 +60,7 @@ int main(void) {
 - C++과 자바는 별도의 연결 리스트 기능의 표준 라이브러리를 제공한다. (+파이썬은 append()와 메소드 제공)
 - 연결되어 있지 않은 노드끼리는 무한의 비용으로 선언한다. 
   + 코드에서 999999999 등의 값으로 넣는데, 그 이유는 논리적으로 정답이 될 수 없는 큰 값이기 때문이다. 
-- ![인접 리스트 이미지](/public/img/studyAlgorithm/Adjacency_Matrix.jpg)
+- ![인접 리스트 이미지](/public/img/studyAlgorithm/Adjacency_Matrix.png)
 
 ```c++
 #include <iostream>
@@ -122,7 +122,17 @@ int main(void) {
 *방문처리? 스택에 한 번 삽입되어 처리된 노드가 다시 삽입되지 않게 체크하는 것. (방문처리=스택에 넣기)
 
 - 인접한 노드가 여러 개라면 번호가 낮은 순서부터 처리한다.
-- ![DFS 이미지](/public/img/studyAlgorithm/DFS.jpg)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS1.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS2.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS3.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS4.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS5.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS6.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS7.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS8.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS9.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS10.png)
+- ![DFS 이미지](/public/img/studyAlgorithm/DFS11.png)
 
 
 - 코드로 구현할 , 스택을 재귀 함수로 이용.
@@ -207,7 +217,11 @@ int main(void) {
 3. 2번의 과정을 더 이상 수행할 수 없을 때까지 반복한다. 
 
 - 인접한 노드가 여러 개라면 숫자가 낮은 순서부터 처리한다.
-- ![BFS 이미지](/public/img/studyAlgorithm/DFS.jpg)
+- ![BFS 이미지](/public/img/studyAlgorithm/BFS1.png)
+- ![BFS 이미지](/public/img/studyAlgorithm/BFS2.png)
+- ![BFS 이미지](/public/img/studyAlgorithm/BFS3.png)
+- ![BFS 이미지](/public/img/studyAlgorithm/BFS4.png)
+- ![BFS 이미지](/public/img/studyAlgorithm/BFS5.png)
 
 
 - 코드로 구현할 때, queue  이용.
@@ -295,3 +309,6 @@ int main(void) {
 - ***실제 수행시간이 DFS보다 좋다.***
 
 ---
+
+
+> 이미지 출처:https://velog.io/@sohi_5/algorithmDFS , https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ndb796&logNo=221230944971 , 
