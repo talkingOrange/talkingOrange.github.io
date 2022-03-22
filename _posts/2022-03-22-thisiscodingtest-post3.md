@@ -10,7 +10,8 @@ categories: studyAlgorithm
 ---
 
 ### [실전문제] 음료수 얼려 먹기
- ![음료수 얼려 먹기 문제 이미지](/public/img/studyAlgorithm/Adjacency_List.jpg)
+ ![음료수 얼려 먹기 문제 이미지](/public/img/studyAlgorithm/DFS_Q1.png)
+ ![음료수 얼려 먹기 문제 이미지](/public/img/studyAlgorithm/DFS_Q1(2).png)
 
 - DFS로 해결하는 문제
 - 
@@ -76,7 +77,7 @@ int main(void){
 ---
 
 ### [실전문제] 미로 탈출
- ![미로탈출 문제 이미지](/public/img/studyAlgorithm/Adjacency_List.jpg)
+ ![미로탈출 문제 이미지](/public/img/studyAlgorithm/BFS_Q2.png)
 
 - BFS로 해결하는 문제
 
