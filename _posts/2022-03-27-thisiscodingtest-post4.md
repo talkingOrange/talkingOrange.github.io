@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[스터디/알고리즘] DFS 백준 24479번"
-date:   2022-03-22
+date:   2022-03-27
 categories: studyAlgorithm
 ---
 
