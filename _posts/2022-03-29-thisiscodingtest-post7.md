@@ -28,7 +28,7 @@ categories: studyAlgorithm
 using namespace std;
 
 int n, m, v;
-const int MAX=1000+1;
+const int MAX=1001;
 int map[MAX][MAX];
 bool visited[MAX];
 queue<int> q;
