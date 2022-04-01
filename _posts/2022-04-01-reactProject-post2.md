@@ -45,17 +45,22 @@ webpack 실행하려면, 프로그램이 (자세한 동작을 명시한) script 
 
 *eject는 한 번 실행하면 되돌릴 수 없다고 한다.
 
+>>eject 실행코드
+
 ```
 npm run eject
 ```
 
-이제 다음과 같은 문구가 출력된다. 아까 이야기한 것처럼 eject는 한 번 실행하면 영구적이기에 확인 절차가 있는 듯 하다. 
+>> 출력
 
+```
 √ Are you sure you want to eject? This action is permanent. ...
+```
+아까 이야기한 것처럼 eject는 한 번 실행하면 영구적이기에 확인 절차가 있는 듯 하다. 
 
 두근거리는 마음으로 Y를 입력했다...
 
-결과는
+>> Y를 입력한 후(오류발생)
 
 ```
 Remove untracked files, stash or commit any changes, and try again.
@@ -71,7 +76,7 @@ git commit -m "commit message"\
 
 ```
 
-커밋이라고 해서 집에 있는 DO it 깃 책도 다시 살펴보고 탐구하고 연구했는데...
+커밋이라고 해서 집에 있는 D it 깃 책도 다시 살펴보고 탐구하고 연구했는데...
 
 간단하게 두줄로 문제가 해결되었다.
 
