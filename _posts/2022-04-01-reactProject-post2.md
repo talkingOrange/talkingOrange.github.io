@@ -30,106 +30,49 @@ categories: reactProject
 
 ### 서버와 클라이언트 연동의 오류 문제
 
-그래프를 DFS로 탐색한 결과와 BFS로 **탐색한 결과를 출력하는 프로그램**을 작성하시오. 
+리액트를 시작하면서 클라이언트(create-react-app)를 생성했고
 
-단, 방문할 수 있는 정점이 여러 개인 경우에는 정점 번호가 작은 것을 먼저 방문하고, 더 이상 방문할 수 있는 점이 없는 경우 종료한다. 
+서버(express)를 구축했습니다.
 
-정점 번호는 1번부터 N번까지이다.
+이제 이 두 가지의 연동이 필요했다. 
+
+> 개념  
+: 연동은 Webpack을 사용해주어야한다고 한다. Webpack은 여러개의 파일을 하나의 js파일로 묶어준다. Webpack은 빠른 로딩 속도와 높은 성능을 도와주기에 필요하다고 한다.
 
 ---
 
-> 코드 풀이
+webpack 실행하려면, 프로그램이 (자세한 동작을 명시한) script 폴더를 숨긴 것을 풀기 위해 eject한다.
 
-```c++
-#include <iostream>
-#include <queue>
-using namespace std;
+*eject는 한 번 실행하면 되돌릴 수 없다고 한다.
 
-int n, m, v;
-const int MAX=1001;
-int map[MAX][MAX];
-bool visited[MAX];
-queue<int> q;
+```
+npm run eject
+```
 
-//초기화 함수
-void reset(){
-    for(int i=0;i<MAX;i++){
-        visited[i]=0;
-    }
-}
+이제 다음과 같은 문구가 출력된다. 아까 이야기한 것처럼 eject는 한 번 실행하면 영구적이기에 확인 절차가 있는 듯 하다. 
 
-void dfs(int v){
-    visited[v]=1; //검색하는 정점 방문 저장
-    cout << v << " "; // 검색하는 것은 모두 출력해주어야 하므로.
-    for(int i=1;i<=n;i++){ //연결 노드들 검색
-        if(map[v][i]==1 && !visited[i]){ //방문하지 않은 것이 있을 경우 재귀함수로 방문
-            dfs(i);
-        }
-    }
-}
+√ Are you sure you want to eject? This action is permanent. ...
 
-void bfs(int v){
-    q.push(v); // 정점 큐에 넣기
-    visited[v]=1; //검색하는 정점 방문 저장
-    cout << v << " "; //검색하는 것은 모두 출력해주어야 하므로.
-    
-    while(!q.empty()){ //큐가 비어있을 때까지 수행하기.
-        v=q.front(); //큐에서 처음꺼 v에 넣음.
-        q.pop(); // 큐에서 빼냄 
-        
-        for(int i=1;i<=n;i++){ //연결 노드들 검색 
-            if(map[v][i]==1 && !visited[i]){ //방문하지 않았다면 방문
-                q.push(i); //반복
-                visited[i]=1; 
-                cout << i << " ";
-            }
-        }         
-    }
-}
+두근거리는 마음으로 Y를 입력했다...
 
-int main(){
-    cin >> n >> m >> v; //정점의 수, 간선의 수, 처음 검색할 수 입력
-    for(int i=0;i<m;i++){ //간선 정보 입력
-        int a,b;
-        cin >> a >> b;
-        map[a][b]=1;
-        map[b][a]=1;
-    }
-    
-    reset(); //초기화
-    dfs(v); 
-    
-    cout << '\n';
-    
-    reset(); //
-    bfs(v);
-       
-    return 0;
-}
+결과는
+
+```
+Remove untracked files, stash or commit any changes, and try again.
+```
+
+**오류가 발생했다.**
+
+방법을 찾아보니 커밋이 필요하다고 했다.
+
+```
+git add .
+git commit -m "commit message"\
 
 ```
 
----
+커밋이라고 해서 집에 있는 DO it 깃 책도 다시 살펴보고 탐구하고 연구했는데...
 
-> 입력
+간단하게 두줄로 문제가 해결되었다.
 
-4 5 1
-
-1 2
-
-1 3
-
-1 4
-
-2 4
-
-3 4
-
-
->출력
-
-1 2 4 3
-
-1 2 3 4
-
-
+역시 역경은 즐거워
