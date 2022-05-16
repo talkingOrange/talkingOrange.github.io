@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[스터디/알고리즘] 이진탐색 백준 6236번"
-date:   2022-03-29
+date:   2022-05-16
 categories: studyAlgorithm
 ---
 
