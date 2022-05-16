@@ -77,6 +77,7 @@ int main() {
 > 입력
 
 https://blog.potados.com/ps/boj-6236-money/
+
 참고해서 해설쓰기
 
 
