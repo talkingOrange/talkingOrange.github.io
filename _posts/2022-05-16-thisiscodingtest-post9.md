@@ -27,57 +27,77 @@ categories: studyAlgorithm
 > 코드 풀이
 
 ```c++
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <vector>
 using namespace std;
- 
- 
-int main() {
-    int N, M, min = 0;
-    cin >> N >> M;
-    int arr[100001];
-    int hi = 0;
- 
-    for (int i = 0; i < N; i++) {
-        cin >> arr[i];
-        min = max(min, arr[i]);
-        hi = hi + arr[i];
-    }
- 
-    int mid = 0;
- 
-    //이진 탐색
-    while (lo <= hi) {
-        mid = (lo + hi) / 2;
-        int cnt = 1;
-        int money = mid;
-        for (int i = 0; i < N; i++) {
-            money = money - arr[i];
-            if (money <= 0) {
-                money = mid - arr[i];
-                cnt++;
-            }
-        }
- 
-        if (cnt > M) lo = mid + 1;
-        else
-            hi = mid - 1;
- 
-    }
- 
-    cout << mid;
- 
-}
 
+vector<int> dayMoney;
+int N, M, sum;
+
+bool Solution(int money)
+{
+	int temp = money, withdraw = 1;
+	for (int i = 0; i < N; i++)
+	{
+		if (dayMoney[i] > money)
+			return false;
+		if (temp - dayMoney[i] < 0)
+		{
+			temp = money;
+			withdraw++;
+		}
+		temp -= dayMoney[i];
+	}
+	return M >= withdraw;
+}
+int main(void)
+{
+	cin >> N >> M;
+	for (int i = 0; i < N; i++)
+	{
+		int n;
+		cin >> n;
+		dayMoney.push_back(n);
+		sum += n;
+	}
+
+	// binary_search //
+	int start = 1, end = sum; // sum은 M이 1인 모든 금액을 더한 값
+	int result;
+	while (start <= end)
+	{
+		int mid = (start + end) / 2;
+		if (Solution(mid))	// 인출횟수가 M보다 작거나 같음 -> 인출금을 줄여보자
+		{
+			result = mid;
+			end = mid -1;
+		}
+		else
+			start = mid + 1;
+	}
+	cout << result << endl;
+	return 0;
+}
 
 ```
 
 ---
 
-> 입력
+> 설명
 
-https://blog.potados.com/ps/boj-6236-money/
+- 현우가 인출하는 금액 : k
 
-참고해서 해설쓰기
+현우가 하루에 돈을 1 <= 금액 <= 10,000원 만큼 통장에서 빼서 쓴다. 통장에서 인출하는 금액은 K이다. (매번 동일)
 
+- N일, M번 출금.
+
+현우가 1 <= N <= 100,000일 동안 사용할 돈이 미리 주어진다. 
+
+M번 출금을 하여 먹고 살 수 있도록 하는 가장 작은 K를 구해야 하는 것이다.
+
+- 이진탐색을 이용한다.
+
+우리는 k를 찾아야하고, 출금횟수인 M은 계속해서 오른쪽을 탐구할 것인지 오른쪽을 탐구할 것인지 알려주는 mid이다.  
+
+인출 홧수가 M보다 많응면 mid값을 증가시킨다.
 
