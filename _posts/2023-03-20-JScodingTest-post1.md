@@ -75,3 +75,9 @@ console.log(uniqueNums(nums));
 
 
 공부자료 : https://www.youtube.com/watch?v=zbH7YqUxFpA, 그 외 다수 사이트
+
+
++) 자바스크립트로 코딩테스트를 볼 경우, 입출력에 대한 이야기
+
+https://velog.io/@bigsaigon333/Javascript%EB%A1%9C-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B01-%EC%9E%85%EC%B6%9C%EB%A0%A5
+
