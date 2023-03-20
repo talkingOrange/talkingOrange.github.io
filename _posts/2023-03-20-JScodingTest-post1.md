@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[JS_Coding_Test] Array 중복 제거 "
+title:  "[JS/CodingTest] Array 중복 제거 "
 date:   2023-03-20
 categories: JSCodingTest
 ---
