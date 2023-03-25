@@ -4,5 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## My's Study Blog
+## 💁🏻‍♀️ Front-End Developer
+
+
 
