@@ -2,7 +2,7 @@
 layout: post
 title:  "[React 프로젝트] 서버와 클라이언트 연동 오류"
 date:   2022-04-01
-categories: reactProject
+categories: react
 ---
 
 # React 프로젝트 시작 및 기록 배경
