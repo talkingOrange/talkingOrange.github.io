@@ -15,6 +15,8 @@ categories: JSCodingTest
 * 문제에서 입력 형식과 출력 형식이 존재한다. 
 
 > 표준 출력 (console.log())
+
+
 ```
 //단순 문자열
 console.log('오이');
@@ -25,6 +27,8 @@ console.log(`정담은 ${result}입니다.`);
 ```
 
 > 빠른 출력 (반복문과 같이 계속 console.log를 찍어내는 것이 아니라 하나의 변수를 선언하여 한 번에 console.log하는 것이 낫다)
+
+
 ```
 let answer = '';
 /*
@@ -39,6 +43,8 @@ console.log(answer)
 ```
 
 > 입력, fs 모듈 (입력 데이터가 텍스트 파일 형태로 주어지는 경우 사용하는 파일 시스템 모듈)
+
+
 ```
 // readline 모듈보다는 fs를 이용해 파일 전체를 읽어 들여 처리하기
 let fs = require('fs');
@@ -55,6 +61,8 @@ A. 다른 파일에서 작성된 코드나 라이브러리를 현재 파일에�
 * require을 통해 모듈을 가져오는 fs 객체를 선언하고 readFileSync를 통해 파일에 데이터를 읽고 toString 문자열로 변환시킨 데이터들을 \n 줄바꿈을 기준으로 데이터를 잘라서 배열에 담아 input 변수에 담는다. 
 
 > 입력, readline 모듈 (파일 시스템을 이용하지 못하도록 막을 수도 있다. fs 모듈을 사용할 수 없을 때, readline을 사용한다.)
+
+
 ```
 const rl = require('readline').createInterface({
 input: process.stdin,
@@ -76,6 +84,7 @@ process.exit();
 
 
 ### 기본 사칙 연산
+
 ```
 console.log(a + b);
 console.log(a - b);
@@ -89,6 +98,7 @@ console.log(a % b);
 ### while 반복문
 
 ### 수 <-> 문자열
+
 ```
 /*
 Int -> String
@@ -111,6 +121,8 @@ console.log(b); // "777"
 
 * 원소를 순차적으로 연산을 수행할 때 사용한다. 
 * 배열에 모든 원소를 하나씩 확인한다. 
+
+
 ```
 /*
 reduce() 메서드는 배열의 각 요소에 대해 reducer 함수를 실행한 뒤에 하나의 결과를 반환합니다.
@@ -132,6 +144,7 @@ console.log(summary); // 28
 ```
 
 ### 배열 생성 및 초기화
+
 ```
 // 직접 값을 설정하여 초기화
 let arr = [8, 1, 4, 5, 7];
@@ -146,6 +159,7 @@ set은 중복된 것은 생성하지 않는다.
 has는 원소를 검색한다. 
 add/delete는 배열의 원소를 추가하고 지운다.
 for of문을 통해 원소를 출력한다.
+
 ```
 let mySet = new Set(); // 집합 객체 생성
 // 여러 개의 원소 삽입
@@ -162,6 +176,7 @@ for (let item of mySet) console.log(item);
 ```
 
 ### 특정 자리에서 소수점 반올림하기 ( toFixed() )
+
 ```
 // 특정 실수에 대하여 toFixed()를 이용해 소수점 아래 둘째 자리까지 출력
 let x = 123.456;
