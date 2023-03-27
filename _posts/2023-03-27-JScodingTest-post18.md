@@ -7,7 +7,7 @@ categories: JSCodingTest
 ---
 
 # 패스트캠퍼스 온라인 강의 
-## Part1.Ch01-06.JS 문자열 문제 풀이
+## Part1.Ch01-07.JS 문자열 문제 풀이
 
 --- 
 
