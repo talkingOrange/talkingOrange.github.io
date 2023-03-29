@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[JS/CodingTest] 트리와 우선순위 큐"
-date:   2023-03-28
+date:   2023-03-29
 categories: JSCodingTest
 
 ---
@@ -74,6 +74,9 @@ categories: JSCodingTest
 // 삭제 : 가장 마지막 노드를 루트 노드로 바꾼다.
 
 ![image](https://user-images.githubusercontent.com/88815795/228226268-005d4e76-ecf2-4764-8c19-6881bc8c86b4.png)
+
+### 8. 자바스크립트에서 우선순위 큐 ( = 힙)
+![image](https://user-images.githubusercontent.com/88815795/228519378-9a1d5e86-c4c5-4967-86d3-9d8131d706d4.png)
 
 
 
