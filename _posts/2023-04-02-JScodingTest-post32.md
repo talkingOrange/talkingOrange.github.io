@@ -5,8 +5,6 @@ date:   2023-04-02
 categories: JSCodingTest
 ---
 
-2023-04-02-JScodingTest-post32.md
-
 # 패스트캠퍼스 온라인 강의 
 ## Part1.Ch03-07. 정렬 문제 풀이 3
 
