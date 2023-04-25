@@ -110,3 +110,37 @@ export default function NavBar() {
 ![image](https://user-images.githubusercontent.com/88815795/234188621-308fdf61-b94b-451f-8def-fd52a3ec3d30.png)
 
 잘 작동된다~
+
+### 4. Global style 설정하기
+
+* `<style jsx global>` 로 설정하기
+* App component, 모든 페이지를 랜더링하게하는 기본 프레임워크를 커스터마이징한다. 
+ - pages폴더 하위에  _app.js를 만든다. (about랜더링 전에 app.js를 랜더링한다.)
+ 
+ ```
+ export default function App({Component, pageProps}){
+ return 
+   <div>
+    <NavBar />
+    <Comonent {...pageProps} / >
+    <style jsx global>{`
+      a{
+        color: white;
+      }</style>
+   </div>;
+ 
+ }
+ ```
+ 
+ 이렇게 작성하면, Component 자리에 우리가 pages에 만든 파일들을 넣어 랜더링하게 된다. 
+ 
+* styles 파일에 존재하는 global css 파일에 커스텀을 통해 아래의 코드마저도 지울 수 있다.
+* _app.tsx에 `import "../styles/globals.css";` 해주면 적용이 된다. 
+
+```
+<style jsx global>{`
+      a{
+        color: white;
+      }</style>
+```
+
