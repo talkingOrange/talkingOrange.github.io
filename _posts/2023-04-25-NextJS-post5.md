@@ -34,6 +34,15 @@ categories: NextJS
 일단 떠오르는 대로 그려보았다...디자인 선생님들이 대단하다..
 
 ![image](https://user-images.githubusercontent.com/88815795/234264002-e76d052c-1b87-4490-ae5e-2f5d2106bc04.png)
+
 조금 더 구체화해보았다. 
 
 페이지가 대강 어느정도 나올지, 좋아요 기능은 어디에 붙일지, 댓글 기능은 어디에 붙일지 고민이 된다!
+
+### 페이지
+
+![image](https://user-images.githubusercontent.com/88815795/234266786-cc1115ee-53d1-4dd9-8a74-b52a8bd2491e.png)
+
+개발하기에 앞서서 어떤 페이지가 필요한지 생각해보았다.
+
+크게 MainPage, About, Contact, Activity(n개) 가 필요하다.
