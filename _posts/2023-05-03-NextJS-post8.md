@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] TailwindCss 적용하기 "
+title:  "[Next.js|프로젝트] 8. TailwindCss 적용하기 "
 date:   2023-05-03
 categories: NextJS
 ---
