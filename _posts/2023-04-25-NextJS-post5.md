@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] 포트폴리오 아이디어 스케치"
+title:  "[Next.js|프로젝트] 5. 포트폴리오 아이디어 스케치"
 date:   2023-04-25
 categories: NextJS
 ---
