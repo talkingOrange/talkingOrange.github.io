@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] Routing"
+title:  "[Next.js|프로젝트] 3. Routing"
 date:   2023-04-25
 categories: NextJS
 ---
