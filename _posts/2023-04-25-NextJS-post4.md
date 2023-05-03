@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] style"
+title:  "[Next.js|프로젝트] 4. style"
 date:   2023-04-25
 categories: NextJS
 ---
