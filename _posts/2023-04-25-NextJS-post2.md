@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] Next.js와 React.js의 차이"
+title:  "[Next.js|프로젝트] 2. Next.js와 React.js의 차이"
 date:   2023-04-25
 categories: NextJS
 ---
