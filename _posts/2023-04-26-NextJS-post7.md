@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Next.js|프로젝트] Fetching Data "
+title:  "[Next.js|프로젝트] 7. Fetching Data "
 date:   2023-04-26
 categories: NextJS
 ---
