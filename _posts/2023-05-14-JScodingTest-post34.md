@@ -87,3 +87,79 @@ console.log(cnt)
 불필요하게 반복되는 for문을 줄여보자!
 
 
+### [ATM](https://www.acmicpc.net/problem/11399)
+
+* 내 풀이 
+
+```
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+
+let n = Number(input[0]); 
+let arr = input[1].split(' ').map(Number); 
+
+arr.sort((a, b) => a - b);
+let answer = 0
+let i = 0;
+
+for(i; i<arr.length;){
+    answer += arr[i];
+    
+    if(arr.length === i+1 ){
+        arr.pop();
+        i=0;
+        continue;
+    }
+    i++;
+}
+
+console.log(answer);
+```
+
+1. 오름차순으로 정리한다.
+2. arr[0] , arr[0]+arr[1], arr[0]+arr[1]+...arr[arr.length -1] 한 것을 모두 더한다.
+- 이 부분을 구현하기 위해서, 나는 정렬된 모든 배열 요소들을 더한다.
+- 마지막 요소까지 더했을 때, 마지막 요소를 pop()을 통해 없애고, i를 0으로 초기화시킨다.
+- arr.length가 0이 될 때까지 이 과정을 반복한다.
+
+
+
+* 강의에서 소개한 코드
+
+
+```
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split('\n
+');
+let n = Number(input[0]); // 사람의 수
+let arr = input[1].split(' ').map(Number); // 모든 처리 시간 입력받기
+// 오름차순 정렬
+arr.sort((a, b) => a - b);
+let answer = 0;
+let summary = 0;
+for (let i = 0; i < n; i++) {
+summary += arr[i]; // i번째 사람이 기다린 총 시간
+answer += summary; // 지금까지 소요된 총 시간
+}
+console.log(answer)
+```
+1. 오름차순으로 정리한다.
+2. arr[0] 을 최종 값 변수에 저장한다.
+3. arr[0]+arr[1] 을 하고 최종 값 변수에 저장한다.
+4. arr[0]+arr[1]+arr[2] 을 하고 최종 값 변수에 저장한다.
+
+이처럼 변수를 2개 두어 차례로 더함과 동시에 전체 변수에 값을 저장한다. 
+
+
+* 비교
+
+![image](https://github.com/talkingOrange/talkingOrange.github.io/assets/88815795/a8bc2e32-9d1e-423d-9c33-ca479a2b0712)
+
+코드 길이는 내가 더 짧지만, 강의에서 제공하는 코드의 메모리와 시간이 훨씬 짧은 것을 알 수 있다. 
+
+나의 단점은 너무 어렵게 생각한다는 것이다. 
+
+문제 요구사항과 해결방법에 대한 아이디어는 틀리지 않았지만, 이를 구현하는 과정에서 비효율적인 코드를 구현한다는 것이다.
+
+많은 문제를 푼다면 이 문제를 해결할 수 있을 것이라고 생각한다. 파이팅!
+
