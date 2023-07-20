@@ -1,0 +1,210 @@
+```
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+
+    // DFS를 이용하여 새로운 친구들을 찾는 함수
+    public static int dfs(HashMap<Integer, ArrayList<Integer>> graph, int start, boolean[] visited) {
+        visited[start] = true;
+        int newFriends = 0;
+
+        ArrayList<Integer> friends = graph.get(start);
+        for (int friend : friends) {
+            if (!visited[friend]) {
+                newFriends++;
+                newFriends += dfs(graph, friend, visited);
+            }
+        }
+
+        return newFriends;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int totalPeople = scanner.nextInt(); // 총 마을 사람 수
+        int totalRelations = scanner.nextInt(); // 친구 관계의 수
+
+        // 빈 그래프 생성
+        HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
+        for (int i = 1; i <= totalPeople; i++) {
+            graph.put(i, new ArrayList<>());
+        }
+
+        // 친구 관계 정보 입력 받기
+        for (int i = 0; i < totalRelations; i++) {
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            // 양방향으로 친구 관계를 추가
+            graph.get(a).add(b);
+            graph.get(b).add(a);
+        }
+
+        // 방문 여부를 저장할 배열 초기화
+        boolean[] visited = new boolean[totalPeople + 1];
+
+        // 철수(1)를 시작으로 새로운 친구들을 찾기 위해 DFS 수행
+        int result = dfs(graph, 1, visited);
+
+        // 짱구를 제외한 새로운 친구들의 수 출력
+        System.out.println(result);
+    }
+}
+
+
+```
+
+- 자꾸 틀림 ㅠㅠ
+
+```
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Main {
+
+    private static final int[] dx = {-1, 1, 0, 0};
+    private static final int[] dy = {0, 0, -1, 1};
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int M = scanner.nextInt(); // 행 (Row)
+        int N = scanner.nextInt(); // 열 (Column)
+
+        int[][] room = new int[M][N]; // 교육장 배치도를 저장하는 배열
+        boolean[][] visited = new boolean[M][N]; // 방문 여부를 표시하는 배열
+        Queue<int[]> queue = new ArrayDeque<>(); // BFS를 위한 큐
+
+        // 교육장 배치도 입력 받기
+        for (int i = 0; i < M; i++) {
+            String rowInput = scanner.next();
+            for (int j = 0; j < N; j++) {
+                room[i][j] = rowInput.charAt(j) - '0';
+                if (room[i][j] == 1) {
+                    queue.offer(new int[]{i, j});
+                    visited[i][j] = true;
+                }
+            }
+        }
+
+        int maxDay = 0; // 코로나가 걸린 학생들이 모두 퇴소하는데 걸리는 최대 날짜
+
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int x = current[0];
+            int y = current[1];
+
+            for (int d = 0; d < 4; d++) {
+                int nx = x + dx[d];
+                int ny = y + dy[d];
+
+                if (nx >= 0 && nx < M && ny >= 0 && ny < N && !visited[nx][ny] && room[nx][ny] == 0) {
+                    visited[nx][ny] = true;
+                    queue.offer(new int[]{nx, ny});
+                    maxDay = Math.max(maxDay, room[x][y] + 1);
+                    room[nx][ny] = room[x][y] + 1;
+                }
+            }
+        }
+
+        int uninfectedCount = 0; // 코로나에 걸리지 않은 교육생의 수
+
+        // 코로나에 걸리지 않은 교육생 수 카운트
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < N; j++) {
+                if (room[i][j] == 0) {
+                    uninfectedCount++;
+                }
+            }
+        }
+
+        System.out.println(maxDay - 1); // 퇴소하는 날짜이므로 1을 빼줍니다.
+        System.out.println(uninfectedCount);
+
+        scanner.close();
+    }
+}
+
+```
+
+- 이것도 답이 안나엄..
+
+```
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Main {
+
+    private static final int[] dx = {1, 1, 1};
+    private static final int[] dy = {0, -1, 1};
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int R = scanner.nextInt(); // 개미와 과자 사이의 길이 (행 수)
+        int C = scanner.nextInt(); // 개미와 과자 사이의 길이 (열 수)
+
+        char[][] board = new char[R][C]; // 개미들이 갈 수 있는 길 정보를 저장하는 배열
+        boolean[][] visited = new boolean[R][C]; // 방문 여부를 표시하는 배열
+
+        // 개미들이 갈 수 있는 길 정보 입력 받기
+        for (int i = 0; i < R; i++) {
+            String rowInput = scanner.next();
+            for (int j = 0; j < C; j++) {
+                board[i][j] = rowInput.charAt(j);
+            }
+        }
+
+        int maxAnts = 0; // 과자를 먹을 수 있는 최대 개미 수
+
+        // 개미들의 이동 시작 (첫 열에서 출발)
+        for (int i = 0; i < R; i++) {
+            if (board[i][0] == '.') {
+                int ants = bfs(board, i);
+                maxAnts = Math.max(maxAnts, ants);
+            }
+        }
+
+        System.out.println(maxAnts);
+        scanner.close();
+    }
+
+    // BFS를 이용하여 개미들이 과자까지 이동하면서 페로몬과 돌멩이를 처리하는 함수
+    private static int bfs(char[][] board, int x) {
+        Queue<int[]> queue = new ArrayDeque<>();
+        queue.offer(new int[]{x, 0}); // 개미의 위치 (x, 0)를 큐에 추가
+        boolean[][] visited = new boolean[board.length][board[0].length];
+        visited[x][0] = true;
+        int ants = 0;
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int[] current = queue.poll();
+                int cx = current[0];
+                int cy = current[1];
+
+                if (cy == board[0].length - 1) {
+                    ants++; // 과자에 도착한 개미는 1로 설정
+                } else {
+                    for (int d = 0; d < 3; d++) {
+                        int nx = cx + dx[d];
+                        int ny = cy + dy[d];
+
+                        if (nx >= 0 && nx < board.length && ny >= 0 && ny < board[0].length && board[nx][ny] == '.' && !visited[nx][ny]) {
+                            visited[nx][ny] = true;
+                            queue.offer(new int[]{nx, ny});
+                        }
+                    }
+                }
+            }
+        }
+
+        return ants;
+    }
+}
+
+```
